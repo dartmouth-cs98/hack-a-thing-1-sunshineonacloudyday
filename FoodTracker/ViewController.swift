@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     // MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
+//    @IBOutlet weak var setDefaultLabelText: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +22,8 @@ class ViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func setDefaultLabelText(_ sender: UIButton) {
+        mealNameLabel.text = "Default Text"
     }
-    
-    //Cristina: If there is an issue later on, check these lines - not in tutorial ex.
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
 
 }
 
