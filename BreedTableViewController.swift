@@ -34,6 +34,8 @@ class BreedTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        breeds.sort { $0.rating > $1.rating }
     }
 
     override func didReceiveMemoryWarning() {
@@ -157,9 +159,10 @@ class BreedTableViewController: UITableViewController {
             
             else {
                 // Add a new breed.
-                let newIndexPath = IndexPath(row: breeds.count, section: 0)
-                
                 breeds.append(breed)
+                breeds.sort { $0.rating > $1.rating }
+                let breedIndex = breeds.index(of: breed)
+                let newIndexPath = IndexPath(row: breedIndex!, section: 0)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
             
