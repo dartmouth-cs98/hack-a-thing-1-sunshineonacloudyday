@@ -1,5 +1,5 @@
 //
-//  Meal.swift
+//  Breed.swift
 //  FoodTracker
 //
 //  Created by Cristina Curcelli on 9/17/17.
@@ -9,7 +9,7 @@
 import UIKit
 import os.log
 
-class Meal: NSObject, NSCoding { // since NSObject only has init initializer do not need to add
+class Breed: NSObject, NSCoding { // since NSObject only has init initializer do not need to add
     
     //MARK: Properties
     
@@ -20,7 +20,7 @@ class Meal: NSObject, NSCoding { // since NSObject only has init initializer do 
     //MARK: Archiving Paths
     
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("meals")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("breeds")
     
     //MARK: Types
     
@@ -61,10 +61,10 @@ class Meal: NSObject, NSCoding { // since NSObject only has init initializer do 
     required convenience init?(coder aDecoder: NSCoder) {
         // The name is required. If we cannot decode a name string, the initializer should fail.
         guard let name = aDecoder.decodeObject(forKey: PropertyKey.name) as? String else {
-            os_log("Unable to decode the name for a Meal object.", log: OSLog.default, type: .debug)
+            os_log("Unable to decode the name for a Breed object.", log: OSLog.default, type: .debug)
             return nil
         }
-        // Because photo is an optional property of Meal, just use conditional cast.
+        // Because photo is an optional property of Breed, just use conditional cast.
         let photo = aDecoder.decodeObject(forKey: PropertyKey.photo) as? UIImage //fixed to update
         
         let rating = aDecoder.decodeInteger(forKey: PropertyKey.rating) //fixed to update

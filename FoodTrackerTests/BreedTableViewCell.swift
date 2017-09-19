@@ -1,5 +1,5 @@
 //
-//  MealTableViewCell.swift
+//  BreedTableViewCell.swift
 //  FoodTracker
 //
 //  Created by Cristina Curcelli on 9/17/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MealTableViewCell: UITableViewCell {
+class BreedTableViewCell: UITableViewCell {
 
     // MARK: Properties
     

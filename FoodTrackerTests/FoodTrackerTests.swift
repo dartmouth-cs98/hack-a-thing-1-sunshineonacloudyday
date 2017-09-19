@@ -11,32 +11,32 @@ import XCTest
 
 class FoodTrackerTests: XCTestCase {
     
-    // MARK: Meal Class Tests
+    // MARK: Breed Class Tests
     
-    // Confirm that the Meal initializer returns a Meal object when given valid parameters.
-    func testMealInitializationSucceeds(){
+    // Confirm that the Breed initializer returns a Breed object when given valid parameters.
+    func testBreedInitializationSucceeds(){
         
         // Zero rating
-        let zeroRatingMeal = Meal.init(name: "Zero", photo: nil, rating: 0)
-        XCTAssertNotNil(zeroRatingMeal)
+        let zeroRatingBreed = Breed.init(name: "Zero", photo: nil, rating: 0)
+        XCTAssertNotNil(zeroRatingBreed)
         
         // Highest positive rating
-        let positiveRatingMeal = Meal.init(name: "Positive", photo: nil, rating: 5)
-        XCTAssertNotNil(positiveRatingMeal)
+        let positiveRatingBreed = Breed.init(name: "Positive", photo: nil, rating: 5)
+        XCTAssertNotNil(positiveRatingBreed)
     }
     
-    func testMealInitializationFails(){
+    func testBreedInitializationFails(){
         
         // Negative rating
-        let negativeRatingMeal = Meal.init(name: "Negative", photo: nil, rating: -1)
-        XCTAssertNil(negativeRatingMeal)
+        let negativeRatingBreed = Breed.init(name: "Negative", photo: nil, rating: -1)
+        XCTAssertNil(negativeRatingBreed)
         
         // Empty string
-        let emptyStringMeal = Meal.init(name: "", photo: nil, rating: 0)
-        XCTAssertNil(emptyStringMeal)
+        let emptyStringBreed = Breed.init(name: "", photo: nil, rating: 0)
+        XCTAssertNil(emptyStringBreed)
         
         // Rating exceeds maximum
-        let largeRatingMeal = Meal.init(name: "Large", photo: nil, rating: 6)
-        XCTAssertNil(largeRatingMeal)
+        let largeRatingBreed = Breed.init(name: "Large", photo: nil, rating: 6)
+        XCTAssertNil(largeRatingBreed)
     }
 }
